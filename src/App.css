@@ -1,0 +1,106 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 80px;
+    pointer-events: none;
+    margin-left: -15px;
+}
+
+.appBox {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    min-width: 300px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.appBox p{
+    margin: 0;
+    text-align: left;
+}
+.appBox button{
+    background-color: #61DAFB;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px 0;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.title > h1 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.5);
+}
+.BoxContainer{
+    background-color: rgba(97,218,251,0.4);
+    border: 1px solid rgba(97,218,251,1);
+    border-radius: 10px;
+    margin: 20px;
+    flex: 1;
+    padding: 10px;
+}
+.BoxContainer > strong{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerList{
+    flex: 1;
+    flex-direction: row;
+    display: flex;
+}
+.containerList > div{
+    display: flex;
+    flex: 1;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    color: #000;
+    flex-direction: column;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282C34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61DAFB;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+button {
+    font-size: calc(10px + 2vmin);
+}
