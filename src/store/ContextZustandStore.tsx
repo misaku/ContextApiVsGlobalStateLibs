@@ -13,7 +13,7 @@ interface TesteContextProviderProps {
 }
 
 
-const {Provider, useStore} = createContext<TesteContextProps & StoreApi<TesteContextProps>>();
+const {Provider, useStore} = createContext<StoreApi<TesteContextProps>>();
 const createStore = (initialNumber: number) => ()=> create<TesteContextProps>(set => ({
   contagem: initialNumber,
   list: [initialNumber],
@@ -21,7 +21,7 @@ const createStore = (initialNumber: number) => ()=> create<TesteContextProps>(se
 }))
 export const ProviderContexZustand: React.FC<TesteContextProviderProps> = ({initialNumber, children}) => {
   return (
-    <Provider createStore={createStore(initialNumber) as any}> {children} </Provider>
+    <Provider createStore={createStore(initialNumber)}> {children} </Provider>
   );
 };
 
