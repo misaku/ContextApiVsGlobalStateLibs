@@ -5,12 +5,12 @@ import {useTesteContextApi} from "../../store/ContexApi";
 import {useZustandStore} from "../../store/ZustandStore";
 import {useStoreContextZustand} from "../../store/ContextZustandStore";
 import {ColorRandom} from '../ColorRandom';
-interface FiIho4Props {
+interface Filho4Props {
     contagem: number;
     list: number[];
     children?: React.ReactNode;
 }
-export const FiIho4: React.FC<FiIho4Props> = ({contagem:contagemLocal, list:listLocal})=>{
+export const Filho4: React.FC<Filho4Props> = ({contagem:contagemLocal, list:listLocal})=>{
 
     const {contagem, list} = useTesteContextApi()
     const  contagemZ = useZustandStore(store => store.contagem)

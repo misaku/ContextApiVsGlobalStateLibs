@@ -1,5 +1,5 @@
 import React from 'react';
-import {FiIho1} from '../FiIho1';
+import {Filho1} from '../Filho1';
 import logo from '../../logo.svg';
 import {useEstadoGlobalController} from './useEstadoGlobalController';
 
@@ -28,7 +28,7 @@ export const EstadoGlobal: React.FC = () => {
         <button onClick={addCountZustand}>Zustand</button>
         <button onClick={addCountZustandContext}>Zustand Context</button>
       </div>
-      <FiIho1 contagem={contagem} list={list}/>
+      <Filho1 contagem={contagem} list={list}/>
     </>
   )
 }

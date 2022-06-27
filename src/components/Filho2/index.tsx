@@ -1,17 +1,17 @@
 import React from "react";
-import {FiIho3} from "../FiIho3";
+import {Filho3} from "../Filho3";
 import {ColorRandom} from '../ColorRandom';
 
-interface FiIho2Props {
+interface Filho2Props {
     contagem: number;
     list: number[];
     children?: React.ReactNode;
 }
-export const FiIho2: React.FC<FiIho2Props> = ({contagem, list})=>{
+export const Filho2: React.FC<Filho2Props> = ({contagem, list})=>{
     return (
         <div className={'BoxContainer'}>
             <strong>Filho 2 <ColorRandom>{Date.now()}</ColorRandom></strong>
-            <FiIho3 contagem={contagem} list={list}/>
+            <Filho3 contagem={contagem} list={list}/>
         </div>
     )
 }
