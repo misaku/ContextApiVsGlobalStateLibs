@@ -7,11 +7,11 @@ interface Filho1Props {
   list: number[];
   children?: React.ReactNode;
 }
-export const Filho1: React.FC<Filho1Props> = ({contagem,list}) => {
+export const Filho1: React.FC<Filho1Props> = React.memo(({contagem,list}) => {
   return (
     <div className={'BoxContainer'}>
       <strong>Filho 1 <ColorRandom>{Date.now()}</ColorRandom></strong>
       <Filho2 contagem={contagem} list={list}/>
     </div>
   )
-}
+});
