@@ -27,7 +27,7 @@ const createStore = (initialNumber: number) => ()=> create<TesteContextProps>(se
     }
   })
 }))
-export const ProviderContexZustend: React.FC<TesteContextProviderProps> = ({initialNumber, children}) => {
+export const ProviderContexZustand: React.FC<TesteContextProviderProps> = ({initialNumber, children}) => {
   return (
     <Provider createStore={createStore(initialNumber) as any}> {children} </Provider>
   );
@@ -35,5 +35,5 @@ export const ProviderContexZustend: React.FC<TesteContextProviderProps> = ({init
 
 export const useStoreContextZustand = useStore;
 
-export default ProviderContexZustend;
+export default ProviderContexZustand;
 

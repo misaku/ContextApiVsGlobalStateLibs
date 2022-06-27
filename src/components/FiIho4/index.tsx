@@ -3,7 +3,7 @@ import React from "react";
 
 import {useTesteContextApi} from "../../store/ContexApi";
 import {useZustandStore} from "../../store/ZustandStore";
-import {useStoreContextZustand} from "../../store/ContextZuztandStore";
+import {useStoreContextZustand} from "../../store/ContextZustandStore";
 import {ColorRandom} from '../ColorRandom';
 interface FiIho4Props {
     contagem: number;
