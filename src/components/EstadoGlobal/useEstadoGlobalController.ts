@@ -1,9 +1,9 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {useTesteContextApi} from '../../store/ContexApi';
 import {useZustandStore} from '../../store/ZustandStore';
 import {useStoreContextZustand} from '../../store/ContextZuztandStore';
 
-interface EstadoGlobalControllertProps {
+interface EstadoGlobalControllerProps {
   contagem: number;
   list: number[];
   addCountLocal():void;
@@ -12,7 +12,7 @@ interface EstadoGlobalControllertProps {
   addCountZustandContext():void;
 }
 
-export const useEstadoGlobalController:()=>EstadoGlobalControllertProps = ()=>{
+export const useEstadoGlobalController:()=>EstadoGlobalControllerProps = ()=>{
 
   const [contagem,setContagem] = useState<number>(0);
   const [list,setList] = useState<number[]>([0]);
