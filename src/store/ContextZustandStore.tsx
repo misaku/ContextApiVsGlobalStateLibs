@@ -1,13 +1,11 @@
-import create, {State, StoreApi} from 'zustand';
+import create, {StoreApi} from 'zustand';
 import createContext from 'zustand/context';
 
 import React from 'react';
 
-interface TesteContextProps {
-  contagem: number;
-  list: number[];
-  addCount(): void;
-}
+import {addCount, type EstadoExemplo} from "./EstadoExemplo";
+
+type TesteContextProps = EstadoExemplo & Readonly<{ addCount(): void }>;
 
 interface TesteContextProviderProps {
   initialNumber: number;
@@ -19,13 +17,7 @@ const {Provider, useStore} = createContext<TesteContextProps & StoreApi<TesteCon
 const createStore = (initialNumber: number) => ()=> create<TesteContextProps>(set => ({
   contagem: initialNumber,
   list: [initialNumber],
-  addCount: () => set(state => {
-    const value = state.contagem + 1
-    return {
-      list: [...state.list, value],
-      contagem: value
-    }
-  })
+  addCount: () => set(addCount),
 }))
 export const ProviderContexZustand: React.FC<TesteContextProviderProps> = ({initialNumber, children}) => {
   return (
