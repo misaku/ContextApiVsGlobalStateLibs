@@ -1,6 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
-import {EstadoGlonbal} from './components/EstadoGlobal';
+import {EstadoGlobal} from './components/EstadoGlobal';
 import {TesteContextApiProvider} from './store/ContexApi';
 import ProviderContexZustend from './store/ContextZuztandStore';
 
@@ -10,7 +10,7 @@ function App() {
       <ProviderContexZustend initialNumber={2}>
         <div className="App">
           <header className="App-header">
-             <EstadoGlonbal />
+             <EstadoGlobal />
           </header>
         </div>
       </ProviderContexZustend>

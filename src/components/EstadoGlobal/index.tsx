@@ -4,7 +4,7 @@ import logo from '../../logo.svg';
 import {useEstadoGlobalController} from './useEstadoGlobalController';
 
 
-export const EstadoGlonbal: React.FC = () => {
+export const EstadoGlobal: React.FC = () => {
 
   const {
     contagem,
