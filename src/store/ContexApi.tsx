@@ -17,13 +17,12 @@ interface TesteContextApiProps{
 export const TesteContextApiProvider: React.FC<TesteContextApiProps> =({children})=>{
     const [{contagem, list}, addCount] = useEstadoExemplo();
 
-    // Atenção: Provider vai atualizar todos os usuários sempre que o `value` mudar,
-    // logo precisamos mantê-lo estável a não ser que algo interno mude (ex: contagem, list ou addCount)
-    const value = useMemo((): TesteContextProps => ({
+    const value = {
         addCount,
         contagem,
         list,
-    }), [addCount, contagem, list]);
+    };
+
     return (
         <TesteContext.Provider value={value}>
             {children}
