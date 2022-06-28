@@ -1,13 +1,10 @@
 import React from 'react';
-import {FiIho1} from '../FiIho1';
-import {useTesteContextApi} from '../../store/ContexApi';
-import {useZustandStore} from '../../store/ZustandStore';
-import {useStoreContextZustand} from '../../store/ContextZuztandStore';
+import {Filho1} from '../Filho1';
 import logo from '../../logo.svg';
 import {useEstadoGlobalController} from './useEstadoGlobalController';
 
 
-export const EstadoGlonbal: React.FC = () => {
+export const EstadoGlobal: React.FC = () => {
 
   const {
     contagem,
@@ -31,7 +28,7 @@ export const EstadoGlonbal: React.FC = () => {
         <button onClick={addCountZustand}>Zustand</button>
         <button onClick={addCountZustandContext}>Zustand Context</button>
       </div>
-      <FiIho1 contagem={contagem} list={list}/>
+      <Filho1 contagem={contagem} list={list}/>
     </>
   )
 }

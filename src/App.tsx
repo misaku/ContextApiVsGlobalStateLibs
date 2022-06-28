@@ -1,19 +1,19 @@
 import logo from './logo.svg'
 import './App.css'
-import {EstadoGlonbal} from './components/EstadoGlobal';
+import {EstadoGlobal} from './components/EstadoGlobal';
 import {TesteContextApiProvider} from './store/ContexApi';
-import ProviderContexZustend from './store/ContextZuztandStore';
+import ProviderContexZustand from './store/ContextZustandStore';
 
 function App() {
   return (
     <TesteContextApiProvider>
-      <ProviderContexZustend initialNumber={2}>
+      <ProviderContexZustand initialNumber={2}>
         <div className="App">
           <header className="App-header">
-             <EstadoGlonbal />
+             <EstadoGlobal />
           </header>
         </div>
-      </ProviderContexZustend>
+      </ProviderContexZustand>
     </TesteContextApiProvider>
 
   )
